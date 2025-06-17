@@ -1,0 +1,343 @@
+/* עיצוב כללי */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  .app {
+    text-align: center;
+  }
+  
+  /* עיצוב הכותרת */
+  .header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-bar {
+    display: flex;
+    /* align-items: start; */
+    justify-content: end;
+    gap: 10px;
+    margin-top: 10px;
+    
+  }
+  
+  .nav-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(235, 228, 228, 0.45);
+    color: #4CAF50;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .nav-button:hover {
+    background-color: #45a049;
+    color: white;
+  }
+  
+  /* עיצוב התוכן */
+  .up {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30vw;
+    max-height: 80vh;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-direction: row;
+    height: 40vw;
+}
+
+.divInput {
+    margin-top: 10%;
+}
+
+.input-box2 {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box2 input {
+
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #000000;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box2 input::placeholder {
+    color: #484141;
+}
+
+.input-box2 i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+
+}
+ 
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    width: 80%;
+    position: relative;
+}
+
+/* .modal-body {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+} */
+
+.details {
+    flex: 1;
+    text-align: left;
+}
+
+.details h5 {
+    margin: 10px 0;
+    font-size: 20px; /* הגדלת הטקסט של הפרטים */
+    color: #333;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    height: 150px;
+    object-fit: cover;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.close-button:hover {
+    background-color: #d32f2f;
+}
+.btn1 {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #000000;
+    padding: 20px 45px 20px 20px;
+    background-color:  #a6bf00a6;
+}
+
+.btn1:hover {
+    background-color: rgb(181, 34, 18);
+    color: white;
+}
+
+
+/* אייקונים מעל הכרטיס */
+/* אייקונים מעל הכרטיס */
+.icons {
+    display: flex; /* הופך את האייקונים לשורה */
+    justify-content: flex-end; /* מיישר את האייקונים לימין */
+    align-items: center; /* ממרכז אותם אנכית */
+    gap: 10px; /* מרווח בין האייקונים */
+    position: absolute; /* ממקם את האייקונים בראש הכרטיס */
+    top: 10px; /* מרווח מהחלק העליון של הכרטיס */
+    right: 10px; /* מרווח מהחלק הימני של הכרטיס */
+    z-index: 10; /* מבטיח שהאייקונים יהיו מעל שאר התוכן */
+}
+
+/* עיצוב כפתור אייקון */
+.icon-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* כאשר הכפתור עובר עליו */
+.icon-button:hover {
+    color: #a6bf00; /* שינוי צבע כאשר מעבירים את העכבר */
+}
+
+/* כרטיס */
+.card-wrapper {
+    position: relative; /* כך האייקונים יהיו ממוקמים על גבי הכרטיס */
+}
+
+/* סגנון הכרטיס */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px; /* רוחב הכרטיס */
+    margin: 10px; /* רווחים בין הכרטיסים */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* גוף הכרטיס */
+.card-body {
+    padding: 10px;
+    text-align: center;
+}
+
+/* קרוסלה */
+.carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px; /* גובה התמונות */
+    overflow: hidden;
+    position: relative;
+}
+
+/* סגנון התמונות */
+.carousel-images {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* כפתורים של החיצים */
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+.carousel button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* עבור מסכים קטנים יותר (מובייל) */
+@media (max-width: 768px) {
+    .cards-container {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%; /* כרטיסים יתפשו את כל רוחב המסך */
+        max-width: 500px; /* רוחב מרבי של כרטיס */
+    }
+
+    .carousel {
+        height: 150px; /* גובה תמונות קטן יותר במסכים קטנים */
+    }
+
+    .carousel button {
+        font-size: 24px;
+        padding: 8px; /* padding קטן יותר */
+    }
+}
+
+/* עבור מסכים גדולים מאוד (כמו דסקטופ רחב) */
+@media (min-width: 1200px) {
+    .cards-container {
+        justify-content: space-evenly; /* מיישר את הכרטיסים בצורה אחידה */
+        gap: 30px; /* רווחים גדולים יותר בין הכרטיסים */
+    }
+
+    .card {
+        width: 300px;
+    }
+}

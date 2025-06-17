@@ -1,0 +1,23 @@
+# === כלליים ===
+node_modules/
+.env
+.DS_Store
+Thumbs.db
+*.log
+
+# === React ===
+build/
+*.env
+public/
+pic/
+
+# === Node.js ===
+dist/
+
+# === VSCode ===
+.vscode/
+
+
+# === npm lock file (לבחירה לפי מנהל החבילות) ===
+package-lock.json
+yarn.lock

@@ -1,0 +1,208 @@
+
+/* דיב חיפוש, מיון וקטגוריה במרכז התמונה */
+.search-filter-container {
+    position: absolute;
+    top: 60%; /* ממקם את הדיב באמצע התמונה */
+    left: 50%;
+    transform: translate(-50%, -50%); /* מיישר אותו בדיוק במרכז */
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.search-filter {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.45); 
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.custom-dropdown {
+    position: relative;
+    width: 28%;
+}
+
+.dropdown-btn {
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 99%;
+    max-height: 160px; /* הגבלת גובה ל-4 אפשרויות */
+    overflow-y: auto; /* הוספת גלילה אם יש יותר מ-4 אפשרויות */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style-type: none;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 5px;
+}
+
+
+.custom-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-content li:hover {
+    background-color: #ddd;
+}
+.button1 {
+    /* padding: 10px; */
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #a6bf00a6;
+    cursor: pointer;
+    width: 15%;
+    padding: 15px;
+
+    
+}
+
+.button1:hover {
+    background-color: #CA8914;
+}
+/*  */
+.div {
+    position: relative; /* מוודא שה- .div יהיה במיקום יחסי */
+    margin-top: 8.5vw;
+    background-color: black;
+    width: 80vw;
+    height: 40rem;
+    margin-left: 10vw;
+    background-image: url('../pic/2.webp');
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    z-index: 0; /* ה-div יהיה מעל ה-blue-background */
+}
+
+.blue-background {
+    width: 100%; /* תופס את כל רוחב המסך */
+    height: 10cm; /* גובה ברוחב */
+    background-color: #a6bf00a6;
+     /* צבע תכלת */
+    padding: 3rem 0; /* רווח פנימי */
+    position: relative; /* מאפשר למקם את האלמנט בצורה יחסית */
+    margin-top: -5rem; /* מושך למעלה כך שהוא יושב על הקרוסלה */
+    z-index: -1; /* ה-blue-background יהיה מתחת ל-div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; /* פינות מעוגלות */
+}
+
+.carousel-container {
+    position: absolute; /* הקרוסלה תהיה ממוקמת באופן מוחלט */
+    top: 45rem; /* ממקם את הקרוסלה 100% מתחת לראש ה-div */
+    left: 50%;
+    transform: translate(-50%); /* ממרכז את הקרוסלה ומעלה אותה מעט */
+    width: 100%;
+    max-width: 70%;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 100; /* מבטיח שהקרוסלה תהיה מעל כל שאר האלמנטים */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* צל להפרדה */
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* תופס את כל רוחב הקונטיינר */
+}
+
+.carousel-card {
+    flex: 0 0 calc(33.33% - 25px); /* כל כרטיס תופס שליש מהרוחב */
+    margin: 0 20px; /* רווח בין כרטיסים */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    text-align: center;
+    padding: 10px;
+}
+
+.carousel-caption h3 {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.carousel-caption p {
+    font-size: 14px;
+    color: #555;
+}
+
+.carousel-btn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: rgb(247, 0, 0);
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0.7;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.3;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    color: #ff6347;
+}
+.alCard{
+    margin-top: 10vw;
+}
