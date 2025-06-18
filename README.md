@@ -1,4 +1,4 @@
-# 🏖️ Vacation Rental Website
+# Vacation Rental Website
 
  vacation rental platform built using **React**, **Node.js**, and **MongoDB**, with a focus on **security**, **advanced search**, and a seamless **user experience**.
 
